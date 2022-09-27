@@ -1,0 +1,142 @@
+:root{
+    --primary-pale: hsl(225, 100%, 94%);
+    --primary-bright: hsl(245, 75%, 52%);
+
+    --neutral-pale: hsl(225,100%,98%);
+    --neutral-desaturated: hsl(224,23%,55%);
+    --neutral-dark: hsl(223,47%,23%);
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-pale);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    /*background-position: center;*/
+    font-family: 'Red Hat Display', sans-serif;
+}
+.card{
+    width:80%;
+    background-color: var(--neutral-pale);
+    margin-top: 6em;
+    border-radius: 16px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2em;
+    max-width: 400px;
+}
+picture{
+    width:100%
+}
+picture img{
+    width:100%;
+    border-radius: 16px 16px 0 0;
+}
+.card-title{
+    margin-top: 1em;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--neutral-dark);
+}
+.card-text{
+    width: 90%;
+    margin: auto;
+    color: var(--neutral-desaturated);
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1em;
+}
+.card-plan{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1em;
+    background-color: hsl(225, 80%, 96%);
+    padding: 5px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.plan-icon img{
+    width: 90%;
+}
+.plan-type{
+    text-align: left;
+}
+.plan-period{
+    font-weight: 700;
+}
+.plan-price{
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--neutral-desaturated);
+}
+.plan-link{
+    color: var(--primary-bright);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.plan-link:hover{
+    color: hsl(245, 58%, 66%);
+    text-decoration: none;
+}
+.plan-button{
+    width: 85%;
+    background-color: var(--primary-bright);
+    margin: auto;
+    padding: 0.5em 0px;
+    border-radius: 8px;
+    color: var(--primary-pale);
+    font-size: 14px;
+    cursor: pointer;
+}
+.plan-button:hover{
+    background-color: hsl(245, 58%, 66%);
+}
+.plan-cancel{
+    font-size: 12px;
+    color: var(--neutral-desaturated);
+    font-weight: 900;
+    margin-top: 1.5em;
+    cursor: pointer;
+}
+.plan-cancel:hover{
+    color: var(--neutral-dark);
+}
+.attribution{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 8px;
+}
+
+@media (min-width: 700px) {
+    body{
+        background-image: url('images/pattern-background-desktop.svg');
+        /*background-size: cover;*/
+        background-repeat: no-repeat;
+    }
+    .card{
+        box-shadow: 0 8px 8px -2px gray;
+    }
+    .card-title{
+        margin-top: 1.8em;
+    }
+    .card-plan{
+        margin-bottom: 2em;
+    }
+}
+
